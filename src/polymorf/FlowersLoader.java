@@ -21,11 +21,11 @@ public class FlowersLoader {
             String[] elements = line2.split(" ");
             for(int i = 0; i < flowers.length; i++){
                 if (elements[i].equals("Роза"))
-                flowers[i] = new Rose();
+                flowers[i] = new Rose(100);
                 if (elements[i].equals("Ромашка"))
-                flowers[i] = new Chamomile();
+                flowers[i] = new Chamomile(70);
                 if (elements[i].equals("Тюльпан"))
-                flowers[i] = new Tulip();
+                flowers[i] = new Tulip(45);
             }
             return flowers;
         } catch (Exception e) {

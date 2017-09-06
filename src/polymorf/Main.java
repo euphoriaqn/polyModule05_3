@@ -14,6 +14,7 @@ public class Main {
         System.out.println();
         System.out.println("В магазине сейчас хранится " + flowerStore.getWallet() + " $");
         System.out.println();
+        Flower[] flowers2 = flowerStore.sell(4, 7, 4);
         System.out.println("В магазине сейчас хранится " + flowerStore.getWallet() + " $");
         String filename = "files/demo_file.txt";
         FlowerSaver.save(filename, flowersMix);

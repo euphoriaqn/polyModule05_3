@@ -4,11 +4,12 @@ package polymorf;
  * Created by user22 on 22.08.2017.
  */
 public class Chamomile extends Flower {
-    static final int price = 70;
-    public Chamomile() {
+    final int price;
+    public Chamomile(int price) {
         super("Ромашка");
+        this.price = price;
     }
     public int getPrice(){
-        return price;
+        return this.price;
     }
 }

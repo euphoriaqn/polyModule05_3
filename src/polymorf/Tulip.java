@@ -4,11 +4,12 @@ package polymorf;
  * Created by user22 on 22.08.2017.
  */
 public class Tulip extends Flower {
-    static final int price = 45;
-    public Tulip() {
+    final int price;
+    public Tulip(int price) {
         super("Тюльпан");
+        this.price = price;
     }
     public int getPrice(){
-        return price;
+        return this.price;
     }
 }
