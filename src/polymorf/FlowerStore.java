@@ -9,13 +9,13 @@ public class FlowerStore {
         replenishWallet(numbRoses, numbCharmomile, numbTulip);
         Flower flower[] = new Flower[numbCharmomile+numbRoses+numbTulip];
         for (int i = 0; i <numbRoses; i++){
-            flower[i] = new Rose(100);
+            flower[i] = new Rose();
         }
         for (int i = numbRoses; i< numbRoses+numbCharmomile; i ++){
-            flower[i] = new Chamomile(70);
+            flower[i] = new Chamomile();
         }
         for (int i = numbCharmomile+numbRoses; i < numbCharmomile+numbRoses+numbTulip; i++){
-            flower[i] = new Tulip(45);
+            flower[i] = new Tulip();
         }
         return flower;
     }
@@ -28,15 +28,15 @@ public class FlowerStore {
         int countTulip = numbTulip;
         int iCount = 0;
         while (countRoses > 0 || countCharmimile > 0 || countTulip > 0){
-            if (countRoses > 0) {flower[iCount] = new Rose(100);
+            if (countRoses > 0) {flower[iCount] = new Rose();
             iCount++;
             countRoses--;
             }
-            if (countCharmimile > 0) {flower[iCount] = new Chamomile(70);
+            if (countCharmimile > 0) {flower[iCount] = new Chamomile();
             iCount++;
             countCharmimile--;
             }
-            if (countTulip > 0) {flower[iCount] = new Tulip(45);
+            if (countTulip > 0) {flower[iCount] = new Tulip();
             iCount++;
             countTulip--;
             }
@@ -45,7 +45,7 @@ public class FlowerStore {
     }
 
     public void replenishWallet(int numbRoses, int numbCharmomile, int numbTulip){
-        Wallet = Wallet + numbRoses*new Rose(100).getPrice() + numbCharmomile*new Chamomile(70).getPrice() + numbTulip*new Tulip(45).getPrice();
+        Wallet = Wallet + numbRoses*new Rose().getPrice() + numbCharmomile*new Chamomile().getPrice() + numbTulip*new Tulip().getPrice();
     }
     public int getWallet(){
         return Wallet;
